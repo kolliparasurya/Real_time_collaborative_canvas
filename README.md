@@ -2,6 +2,8 @@
 
 This is a web-based whiteboard application that allows multiple users to draw, create shapes, and write text on a shared canvas in real-time. It uses WebSockets to sync data between clients instantly. I built this to understand how real-time data flow works and how to handle concurrent user inputs without freezing the browser.
 
+Deployment link - https://real-time-collaborative-canvas-alpha.vercel.app/
+
 ## Setup Instructions
 
 Prerequisites: You need Node.js installed on your machine.
