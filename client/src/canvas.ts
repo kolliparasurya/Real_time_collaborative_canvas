@@ -365,6 +365,15 @@ export class CanvasManager {
 
                 setTimeout(() => {roomLabel.style.color = "#666"}, 1000);
             }
+
+            const statusMsg = document.getElementById("statusMessage");
+            if(statusMsg) {
+                statusMsg.innerText = `Successfully joined room: ${roomId}`;
+                
+                setTimeout(() => {
+                    statusMsg.innerText = "Select a tool to start drawing.";
+                }, 3000);
+            }
         })
     }
 
