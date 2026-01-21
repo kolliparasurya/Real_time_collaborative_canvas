@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaborative Canvas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-DaazFfZM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C_NJK8oO.css">
+  </head>
+  <body>
+    <div id="app">
+      
+      <header class="top-bar">
+        <div class="room-info">
+          <span class="app-name">Canvas</span>
+          <div class="room-badge">
+             <span class="label">Room:</span>
+             <span id="currentRoomLabel" class="value">general</span>
+          </div>
+        </div>
+
+        <div id="statusMessage" class="status-message">
+          Welcome! Select a tool to start.
+        </div>
+
+        <div class="user-info">
+          <div class="online-badge">
+            <span class="dot"></span>
+            <span id="userCount">1</span> Online
+          </div>
+        </div>
+      </header>
+
+      <div class="toolbar">
+        
+        <div class="tool-section">
+            <button id="brushBtn" class="btn active" title="Brush">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                </svg>
+            </button>
+            <button id="rectBtn" class="btn" title="Rectangle">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                </svg>
+            </button>
+            <button id="circleBtn" class="btn" title="Circle">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+            </button>
+            <button id="textBtn" class="btn" title="Text">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 7V4h16v3"></path>
+                    <path d="M9 20h6"></path>
+                    <path d="M12 4v16"></path>
+                </svg>
+            </button>
+            <button id="eraserBtn" class="btn" title="Eraser">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 20H7L3 16C2 15 2 13 3 12L13 2L22 11L20 20Z"></path>
+                    <path d="M17 17L7 7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="tool-section properties">
+            <div class="input-group">
+                <input type="color" id="colorPicker" value="#000000" title="Color" />
+            </div>
+            <div class="input-group">
+                <label for="brushSize" style="font-size:10px; font-weight:bold;">SIZE</label>
+                <input type="range" id="brushSize" min="1" max="50" value="5" title="Brush Size" />
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="tool-section actions">
+            <div class="room-input-group">
+                <input type="text" id="roomInput" placeholder="Join Room ID..." />
+                <button id="joinRoomBtn" class="btn-text">Join</button>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="tool-section file-ops">
+             <button id="undoBtn" class="btn-icon" title="Undo">↩️</button>
+             <button id="redoBtn" class="btn-icon" title="Redo">↪️</button>
+             <button id="saveBtn" class="btn-icon" title="Save">💾</button>
+             <label class="btn-icon" title="Load" style="cursor: pointer;">
+                📂 <input type="file" id="loadInput" style="display: none;">
+             </label>
+             <button id="clearBtn" class="btn-text danger">Clear</button>
+        </div>
+      </div>
+
+      <canvas id="drawingCanvas"></canvas>
+
+      <div id="metrics">
+          <span id="fps-counter">FPS: 0</span> • <span id="latency-counter">Ping: 0ms</span>
+      </div>
+    </div>
+
+  </body>
+</html>

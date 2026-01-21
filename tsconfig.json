@@ -1,0 +1,17 @@
+{
+    "compilerOptions":{
+        "target" : "ES6",
+        "module" : "commonjs",
+
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+
+        /* Build behavior */
+        "isolatedModules": true,
+        "skipLibCheck": true
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "interactive_canvas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm run build:server && npm run build:client",
+    "start": "node dist/server/server.js",
+    "dev:server": "nodemon --watch server --exec \"ts-node server/server.ts",
+    "build:server": "tsc -p server/tsconfig.json",
+    "dev-old:server": "nodemon --watch server --exec \"npm run build:server && node dist/server.js\"",
+    "dev:client": "vite",
+    "build:client": "vite build",
+    "dev-old:client": "npm run build-old:client -- --watch",
+    "build-old:client": "tsc -p client/tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/uuid": "^10.0.0",
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.9",
+    "@types/socket.io": "^3.0.1",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}

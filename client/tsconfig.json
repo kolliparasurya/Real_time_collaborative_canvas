@@ -1,0 +1,10 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions":{
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "outDir": "../dist",
+        "lib": ["DOM", "ES6"]
+    },
+    "include": ["src", "../shared"]
+}
