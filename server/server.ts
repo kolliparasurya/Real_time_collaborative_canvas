@@ -8,7 +8,10 @@ const app = express();
 const httpServer = createServer(app);
 
 const io = new Server<ClientToServerEvents, ServerToClientEvents>(httpServer, {
-    cors: { origin: process.env.CLIENT_URL || "*" },
+    cors: { 
+        origin: process.env.CLIENT_URL || "*",
+        methods: ["GET", "POST"]
+     },
 });
 
 // State maps for rooms
