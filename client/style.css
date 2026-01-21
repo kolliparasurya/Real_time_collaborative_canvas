@@ -144,3 +144,30 @@ canvas {
     z-index: 9999;
     font-family: monospace;
 }
+
+
+/* client/style.css */
+
+.user-cursor {
+    position: absolute; /* Essential for moving it around */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none; /* Crucial: lets you click "through" the cursor to draw */
+    z-index: 9999; /* Keeps it on top of the canvas */
+    transition: left 0.1s linear, top 0.1s linear; /* Smooth movement */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Optional: Add the text label styling */
+.user-cursor span {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background: inherit; /* Matches the cursor color */
+    color: white;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+}
