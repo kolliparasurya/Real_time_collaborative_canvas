@@ -4,7 +4,9 @@
         "module": "ESNext",
         "moduleResolution": "node",
         "outDir": "../dist",
-        "lib": ["DOM", "ES6"]
+        "lib": ["DOM", "ES6"],
+
+        "types": ["vite/client"]
     },
     "include": ["src", "../shared"]
 }
