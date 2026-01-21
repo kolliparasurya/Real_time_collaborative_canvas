@@ -10,7 +10,10 @@ const PORT = 3000;
 const app = (0, express_1.default)();
 const httpServer = (0, http_1.createServer)(app);
 const io = new socket_io_1.Server(httpServer, {
-    cors: { origin: "*" },
+    cors: {
+        origin: process.env.CLIENT_URL || "*",
+        methods: ["GET", "POST"]
+    },
 });
 // State maps for rooms
 const roomHistories = new Map();
