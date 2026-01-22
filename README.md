@@ -4,6 +4,8 @@ This is a web-based whiteboard application that allows multiple users to draw, c
 
 Deployment link - https://real-time-collaborative-canvas-alpha.vercel.app/
 
+[NOTE:- PLEASE WAIT FOR 1min AFTER OPENING THE LINK TO LOAD THE RENDER SERVER TO CONNECT WITH FRONTEND IN VERCEL]
+
 ## Setup Instructions
 
 Prerequisites: You need Node.js installed on your machine.
