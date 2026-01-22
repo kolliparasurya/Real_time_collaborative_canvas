@@ -18,7 +18,7 @@ Prerequisites: You need Node.js installed on your machine.
     ```
 
 2.  **Run the Project**
-    I set up a concurrent script so you don't need two terminals. Just run:
+    I set up a script so you need two terminals. Just run:
 
     ```bash
     npm run build
