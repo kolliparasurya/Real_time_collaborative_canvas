@@ -21,10 +21,19 @@ Prerequisites: You need Node.js installed on your machine.
     I set up a concurrent script so you don't need two terminals. Just run:
 
     ```bash
+    npm run build
+    npm run start
+    ```
+
+    This will start the backend server on port 3000.
+
+    Start new terminal
+
+    ```bash
     npm run dev
     ```
 
-    This will start the backend server on port 3000 and the Vite frontend (usually on port 5173).
+    The Vite frontend (usually on port 5173).
 
 3.  **Access the App**
     Open your browser and go to the link shown in the terminal (likely http://localhost:5173).
